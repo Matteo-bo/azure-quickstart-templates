@@ -75,21 +75,21 @@
       "metadata": {
         "description": "The size of the AD VM Created"
       },
-      "defaultValue": "Standard_DS2"
+      "defaultValue": "Standard_B2ms"
     },
     "sqlVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the SQL VM Created"
       },
-      "defaultValue": "Standard_DS2"
+      "defaultValue": "Standard_D2s_v3"
     },
     "spVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the VM Created"
       },
-      "defaultValue": "Standard_DS3"
+      "defaultValue": "Standard_B2ms"
     },
     "domainName": {
       "type": "string",
@@ -249,13 +249,13 @@
     "sqlBEAddressPoolID": "[concat(variables('sqllbID'),'/backendAddressPools/',variables('LBBE'))]",
     "spIPConfigID": "[concat(variables('spNicId'),'/ipConfigurations/ipconfig1')]",
     "adDataDisk": "ADDataDisk",
-    "adDataDiskSize": 1000,
+    "adDataDiskSize": 15,
     "sqlDataDisk": "SQLDataDisk",
-    "sqlDataDiskSize": 1000,
+    "sqlDataDiskSize": 30,
     "sqlLogDisk": "SQLLogDisk",
-    "sqlLogDiskSize": 1000,
+    "sqlLogDiskSize": 15,
     "spDataDisk": "SPDataDisk",
-    "spDataDiskSize": 1000,
+    "spDataDiskSize": 50,
     "adpublicIPAddressName": "adpublicIP",
     "sqlpublicIPAddressName": "sqlpublicIP",
     "spCentralAdminPort": 8080,
