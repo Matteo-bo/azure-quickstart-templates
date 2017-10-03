@@ -248,6 +248,14 @@
     "sqlRDPNATRuleID": "[concat(variables('sqllbID'),'/inboundNatRules/',variables('RDPNAT'))]",
     "sqlBEAddressPoolID": "[concat(variables('sqllbID'),'/backendAddressPools/',variables('LBBE'))]",
     "spIPConfigID": "[concat(variables('spNicId'),'/ipConfigurations/ipconfig1')]",
+    "adDataDisk": "ADDataDisk",
+    "adDataDiskSize": 15,
+    "sqlDataDisk": "SQLDataDisk",
+    "sqlDataDiskSize": 30,
+    "sqlLogDisk": "SQLLogDisk",
+    "sqlLogDiskSize": 15,
+    "spDataDisk": "SPDataDisk",
+    "spDataDiskSize": 50,
     "adpublicIPAddressName": "adpublicIP",
     "sqlpublicIPAddressName": "sqlpublicIP",
     "spCentralAdminPort": 8080,
@@ -598,6 +606,9 @@
           "storageAccountNamePrefix": {
             "value": "[parameters('storageAccountNamePrefix')]"
           },
+          "adDataDisk": {
+            "value": "[variables('adDataDisk')]"
+          },
           "adNicName": {
             "value": "[variables('adNicName')]"
           },
@@ -650,6 +661,12 @@
           },
           "storageAccountNamePrefix": {
             "value": "[parameters('storageAccountNamePrefix')]"
+          },
+          "sqlDataDisk": {
+            "value": "[variables('sqlDataDisk')]"
+          },
+          "sqlLogDisk": {
+            "value": "[variables('sqlLogDisk')]"
           },
           "sqlNicName": {
             "value": "[variables('sqlNicName')]"
@@ -709,6 +726,9 @@
           },
           "spNicName": {
             "value": "[variables('spNicName')]"
+          },
+          "spDataDisk": {
+            "value": "[variables('spDataDisk')]"
           },
           "storageAccountNamePrefix": {
             "value": "[parameters('storageAccountNamePrefix')]"
