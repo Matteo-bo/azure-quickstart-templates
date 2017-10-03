@@ -75,21 +75,21 @@
       "metadata": {
         "description": "The size of the AD VM Created"
       },
-      "defaultValue": "Standard_B2ms"
+      "defaultValue": "Standard_B2s"
     },
     "sqlVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the SQL VM Created"
       },
-      "defaultValue": "Standard_D2s_v3"
+      "defaultValue": "Standard_B2s"
     },
     "spVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the VM Created"
       },
-      "defaultValue": "Standard_B2ms"
+      "defaultValue": "Standard_B2s"
     },
     "domainName": {
       "type": "string",
@@ -205,7 +205,7 @@
       "metadata": {
         "description": "The type of the Storage Account created"
       },
-      "defaultValue": "Premium_LRS"
+      "defaultValue": "Standard_LRS"
     }
   },
   "variables": {
